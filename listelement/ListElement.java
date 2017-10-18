@@ -23,10 +23,20 @@ public class ListElement {
 	private int data;
 	
 	/**
+	 * 
+	 * @param next
+	 * 		a pointer to next ListElement
+	 * @return
+	 * 		ListElement
+	 * @param previous
+	 * 		a pointer to previous ListElement
+	 * @return
+	 * 		ListElement
 	 * @param data
 	 * 		an integer to be stored in the node
 	 * @return
 	 * 		none
+	 * 
 	 **/
 	
 	public ListElement() {
@@ -41,5 +51,21 @@ public class ListElement {
 	
 	public int getData() {
 		return this.data;
+	}
+	
+	public void setPrevious(ListElement previous) {
+		this.previous = previous;
+	}
+	
+	public ListElement getPrevious() {
+		return this.previous;
+	}
+	
+	public void setNext(ListElement next) {
+		this.next = next;
+	}
+	
+	public ListElement getNext() {
+		return this.next;
 	}
 }
