@@ -18,7 +18,6 @@ public class ListElement {
 	 * and previous elements, and element data.
 	 */
 	
-	private static ListElement header = null;
 	private ListElement next;
 	private ListElement previous;
 	private int data;
@@ -47,14 +46,6 @@ public class ListElement {
 		this.data = 0; 
 		this.next = null;
 		this.previous = null;
-	}
-
-	public static void setHeader(ListElement header) {
-		ListElement.header = header;
-	}
-
-	public static ListElement getHeader() {
-		return header;
 	}
 
 	public void setNext(ListElement next) {

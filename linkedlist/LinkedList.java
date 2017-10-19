@@ -21,14 +21,24 @@ public class LinkedList {
 	 * Method is head -> tail traversing.
 	 * 
 	 */
+	
+	private static ListElement header = null;
+	
+	public static void setHeader(ListElement header) {
+		LinkedList.header = header;
+	}
+
+	public static ListElement getHeader() {
+		return header;
+	}
 
 	public ListElement getElement(int index) {
 		// Case empty list
-		if (ListElement.getHeader() == null) {
+		if (LinkedList.getHeader() == null) {
 			return null;
 		}
 		// Case existing list
-		ListElement temp = ListElement.getHeader();
+		ListElement temp = LinkedList.getHeader();
 		// Iterate until index found or eol
 		while ((temp.getData() != index) && (temp.getNext() != null))
 		{
@@ -51,14 +61,15 @@ public class LinkedList {
 			return;
 		}
 		// Case empty list
-		if (ListElement.getHeader() == null) {
-			ListElement.setHeader(le);
+		if (LinkedList.getHeader() == null) {
+			System.out.println("testesteste");
+			LinkedList.setHeader(le);
 			le.setNext(null);
 			le.setPrevious(null);
 		}
 		// Case existing list
 		else {
-			ListElement temp = ListElement.getHeader();
+			ListElement temp = LinkedList.getHeader();
 			// Iterate until eol
 			while (temp.getNext() != null)
 			{
@@ -78,9 +89,9 @@ public class LinkedList {
 		if (current != null) {
 			// true
 			// Check if element is header
-			if (current == ListElement.getHeader()) {
+			if (current == LinkedList.getHeader()) {
 				//true
-				ListElement.setHeader(current.getNext());
+				LinkedList.setHeader(current.getNext());
 				return current;
 			}
 			else {
@@ -98,16 +109,17 @@ public class LinkedList {
 
 	public void printLinkedListHead() {
 		// Case empty list
-		if (ListElement.getHeader() == null) {
+		if (LinkedList.getHeader() == null) {
 			return;
 		}
 		// Case existing list
 		else {
-			ListElement temp = ListElement.getHeader();
+			ListElement temp = LinkedList.getHeader();
+			System.out.println("The linked list is: ");
 			// Iterate until eol
-			while (temp.getNext() != null)
+			while (temp != null)
 			{
-				System.out.println(temp.getData());
+				System.out.println(temp.getData() + " ");
 				temp = temp.getNext();
 			}
 		}
