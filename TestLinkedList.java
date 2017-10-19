@@ -2,7 +2,7 @@
  * TestLinkedList.java
  *
  * DESCRIPTION:
- * Class ListElement for Lab Assignment 3 Phase 1
+ * Class TestLinkedList for Lab Assignment 3 Phase 1
  *
  * ENSE 374-092 Lab Assignment 3 Phase 1
  * 
