@@ -17,7 +17,7 @@ public class ListElement {
      * list elements, including next
      * and previous elements, and element data.
      */
-	private static ListElement header;
+	private static ListElement header = null;
 	private ListElement next;
 	private ListElement previous;
 	private int data;
