@@ -17,6 +17,9 @@ import listelement.ListElement;
 public class LinkedList {
     /* Class LinkedList has methods for manipulating
      * Class ListElement objects.
+     * 
+     * Method is head -> tail traversing.
+     * 
      */
 	
 	public ListElement getElement(int index) {
@@ -69,8 +72,27 @@ public class LinkedList {
 	}
 	
 	public ListElement deleteElement(int index) {
-		if (getElement(index) != null) {
-			
+		// Get element.data
+		ListElement current = getElement(index);
+		// Check if index found
+		if (current != null) {
+			// true
+			// Check if element is header
+			if (current == ListElement.getHeader()) {
+				//true
+				// Delete header
+				ListElement.setHeader(current.getNext());
+				return current;
+			}
+			else {
+				//false
+				current.setPrevious(current.getNext());
+				return current;
+			}
+		}
+		else {
+			// false
+			return null;
 		}
 	}
 	
