@@ -15,13 +15,13 @@ package linkedlist;
 import listelement.ListElement;
 
 public class LinkedList {
-    /* Class LinkedList has methods for manipulating
-     * Class ListElement objects.
-     * 
-     * Method is head -> tail traversing.
-     * 
-     */
-	
+	/* Class LinkedList has methods for manipulating
+	 * Class ListElement objects.
+	 * 
+	 * Method is head -> tail traversing.
+	 * 
+	 */
+
 	public ListElement getElement(int index) {
 		// Case empty list
 		if (ListElement.getHeader() == null) {
@@ -44,7 +44,7 @@ public class LinkedList {
 			return null;
 		}
 	}
-	
+
 	public void addElement(ListElement le) {
 		// Case empty le
 		if (le == null) {
@@ -70,7 +70,7 @@ public class LinkedList {
 			le.setNext(null);
 		}	
 	}
-	
+
 	public ListElement deleteElement(int index) {
 		// Get element.data
 		ListElement current = getElement(index);
@@ -80,7 +80,6 @@ public class LinkedList {
 			// Check if element is header
 			if (current == ListElement.getHeader()) {
 				//true
-				// Delete header
 				ListElement.setHeader(current.getNext());
 				return current;
 			}
@@ -95,9 +94,22 @@ public class LinkedList {
 			return null;
 		}
 	}
-	
-	
+
+
 	public void printLinkedListHead() {
-		
+		// Case empty list
+		if (ListElement.getHeader() == null) {
+			return;
+		}
+		// Case existing list
+		else {
+			ListElement temp = ListElement.getHeader();
+			// Iterate until eol
+			while (temp.getNext() != null)
+			{
+				System.out.println(temp.getData());
+				temp = temp.getNext();
+			}
+		}
 	}
 }
