@@ -22,7 +22,7 @@ INSTALL INFORMATION
 	1.) CLick the big green "Clone or download" button to the right side of your window.
 	2.) Download these files into your local repository, or,
 	3.) Copy the HTTPS link and checkout these files through your local repository 
-		as a remote repository
+	    as a remote repository
 
 —————————————————————————————————————————————————————————————————————————————
 —————————————————————————————————————————————————————————————————————————————
