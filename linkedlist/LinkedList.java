@@ -33,49 +33,44 @@ public class LinkedList {
 	}
 
 	public ListElement getElement(int index) {
-		// Case empty list
 		if (LinkedList.getHeader() == null) {
+			System.out.println("The List is empty!");
 			return null;
 		}
-		// Case existing list
+
 		ListElement temp = LinkedList.getHeader();
-		// Iterate until index found or eol
+
 		while ((temp.getData() != index) && (temp.getNext() != null))
 		{
 			temp = temp.getNext();
 		}
-		// Check if eol.data is index
+
 		if (temp.getData() == index) {
-			//true
 			return temp;
 		}
 		else {
-			//false
 			return null;
 		}
 	}
 
 	public void addElement(ListElement le) {
-		// Case empty le
 		if (le == null) {
 			return;
 		}
-		// Case empty list
+		
 		if (LinkedList.getHeader() == null) {
-			System.out.println("testesteste");
 			LinkedList.setHeader(le);
 			le.setNext(null);
 			le.setPrevious(null);
 		}
-		// Case existing list
 		else {
 			ListElement temp = LinkedList.getHeader();
-			// Iterate until eol
+
 			while (temp.getNext() != null)
 			{
 				temp = temp.getNext();
 			}
-			// Set le in list
+
 			temp.setNext(le);
 			le.setPrevious(temp);
 			le.setNext(null);
@@ -83,43 +78,36 @@ public class LinkedList {
 	}
 
 	public ListElement deleteElement(int index) {
-		// Get element.data
 		ListElement current = getElement(index);
-		// Check if index found
+
 		if (current != null) {
-			// true
-			// Check if element is header
 			if (current == LinkedList.getHeader()) {
-				//true
 				LinkedList.setHeader(current.getNext());
 				return current;
 			}
 			else {
-				//false
 				current.setPrevious(current.getNext());
 				return current;
 			}
 		}
 		else {
-			// false
 			return null;
 		}
 	}
 
 
 	public void printLinkedListHead() {
-		// Case empty list
 		if (LinkedList.getHeader() == null) {
+			System.out.println("The List is empty!");
 			return;
 		}
-		// Case existing list
 		else {
 			ListElement temp = LinkedList.getHeader();
-			System.out.println("The linked list is: ");
-			// Iterate until eol
+			System.out.println("The linked list is:");
+
 			while (temp != null)
 			{
-				System.out.println(temp.getData() + " ");
+				System.out.println(temp.getData() + "->");
 				temp = temp.getNext();
 			}
 		}
