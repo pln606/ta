@@ -17,19 +17,22 @@ public class ListElement {
      * list elements, including next
      * and previous elements, and element data.
      */
-	
+	private static ListElement header;
 	private ListElement next;
 	private ListElement previous;
 	private int data;
 	
 	/**
-	 * 
+	 * @param head
+	 * 		the head element ListElement
+	 * @return
+	 * 		ListElement
 	 * @param next
-	 * 		a pointer to next ListElement
+	 * 		the next element ListElement
 	 * @return
 	 * 		ListElement
 	 * @param previous
-	 * 		a pointer to previous ListElement
+	 * 		the previous element ListElement
 	 * @return
 	 * 		ListElement
 	 * @param data
@@ -45,12 +48,20 @@ public class ListElement {
 		this.previous = null;
 	}
 	
-	public void setData(int data) {
-		this.data = data;
+	public static void setHeader(ListElement header) {
+		ListElement.header = header;
 	}
 	
-	public int getData() {
-		return this.data;
+	public static ListElement getHeader() {
+		return header;
+	}
+	
+	public void setNext(ListElement next) {
+		this.next = next;
+	}
+	
+	public ListElement getNext() {
+		return this.next;
 	}
 	
 	public void setPrevious(ListElement previous) {
@@ -61,11 +72,12 @@ public class ListElement {
 		return this.previous;
 	}
 	
-	public void setNext(ListElement next) {
-		this.next = next;
+	public void setData(int data) {
+		this.data = data;
 	}
 	
-	public ListElement getNext() {
-		return this.next;
+	public int getData() {
+		return this.data;
 	}
+	
 }
