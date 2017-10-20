@@ -103,7 +103,7 @@ public class LinkedList {
 				current.getNext().setPrevious(null);
 				return current;
 			} 
-			else if ((current != LinkedList.getHeader()) && (current != LinkedList.getTail())){
+			else if ((current != LinkedList.getHeader()) && (current != LinkedList.getTail())) {
 				current.getPrevious().setNext(current.getNext());
 				current.getNext().setPrevious(current.getPrevious());
 				return current;
