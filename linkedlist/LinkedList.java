@@ -106,13 +106,11 @@ public class LinkedList {
 			else if ((current != LinkedList.getHeader()) && (current != LinkedList.getTail())){
 				current.getPrevious().setNext(current.getNext());
 				current.getNext().setPrevious(current.getPrevious());
-				current.setPrevious(current.getNext());
 				return current;
 			}
 			else {
 				LinkedList.setTail(current.getPrevious());
-				current.getPrevious().setNext()
-				current.setPrevious(current.getNext());
+				current.getPrevious().setNext(null);
 				return current;
 			}
 		}
@@ -149,7 +147,7 @@ public class LinkedList {
 
 			while (temp != null)
 			{
-				System.out.println(temp.getData() + "->");
+				System.out.println(temp.getData() + "<-");
 				temp = temp.getPrevious();
 			}
 		}
