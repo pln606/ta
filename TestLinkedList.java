@@ -2,9 +2,9 @@
  * TestLinkedList.java
  *
  * DESCRIPTION:
- * Class TestLinkedList for Lab Assignment 3 Phase 1
+ * Class TestLinkedList for Lab Assignment 3 Phase 2
  *
- * ENSE 374-092 Lab Assignment 3 Phase 1
+ * ENSE 374-092 Lab Assignment 3 Phase 2
  * 
  * @author Kelly Holtzman
  * I.D.: 200366225
@@ -26,7 +26,7 @@ public class TestLinkedList {
 		int tempInt = 0;
 		
 		System.out.println("This program demonstrates an unsorted linked list\nTo manipulate this list, please choose one of the below:\n");
-		System.out.println("A: Add Element\nG: Get an Element\nD: Delete an Element\nP: Print the list\nR: Run menu again\nQ: Quit program");
+		System.out.println("A: Add Element\nG: Get an Element\nD: Delete an Element\nH: Print the list head to tail\nT: Print the list tail to head\nR: Run menu again\nQ: Quit program");
 		
 		menuLoop: while (true) 
 		{
@@ -68,12 +68,16 @@ public class TestLinkedList {
 					}
 					break;
 					
-				case 'P':
+				case 'H':
 					newList.printLinkedListHead();
 					break;
 					
+				case 'T':
+					newList.printLinkedListTail();
+					break;
+					
 				case 'R':
-					System.out.println("A: Add Element\nG: Get an Element\nD: Delete an Element\nP: Print the list\nR: Run menu again\nQ: Quit program");
+					System.out.println("A: Add Element\nG: Get an Element\nD: Delete an Element\nH: Print the list head to tail\nT: Print the list tail to head\nR: Run menu again\nQ: Quit program");
 					break;
 					
 				case 'Q':
