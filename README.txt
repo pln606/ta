@@ -1,11 +1,18 @@
 ENSE 374-092 Lab Assignment #3, “Read Me” file for Documentation  10/20/2017
 
+REPOSITORY NOTES
+————————————————
+
+-   Please see the master branch for Phase 1 files
+-   Please see Phase_2 branch for Phase 2 files
+
 GENERAL USAGE NOTES
 ———————————————————
 
 -   TestLinkedList is the main class used in Assignment #3, it includes methods
-    of adding, deleting, finding list elements, and a method to print the full list,
-    as per Phase 1 and 2 of Assignment #3.
+    of adding, deleting, finding list elements, and a method to print the full list
+    (both head to tail and tail to head) as per Phase 2 of Assignment #3.
+-   Phase 2 is finished as of 10/20/2017, the list is a doubly-linked list.
 	
 INSTALL INFORMATION
 ———————————————————
