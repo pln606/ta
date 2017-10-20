@@ -3,13 +3,9 @@ ENSE 374-092 Lab Assignment #3, “Read Me” file for Documentation  10/20/2017
 GENERAL USAGE NOTES
 ———————————————————
 
--   TestListElement is used to create an object of ListElement and test
-    its methods, as per Phase 1.
 -   TestLinkedList is the main class used in Assignment #3, it includes methods
     of adding, deleting, finding list elements, and a method to print the full list,
-    as per Phase 1 of Assignment #3.
--   Phase 1 is finished as of 10/18/2017, the method of traversing the unsorted 
-    linked list is head to tail.
+    as per Phase 1 and 2 of Assignment #3.
 	
 INSTALL INFORMATION
 ———————————————————
