@@ -85,7 +85,6 @@ public class TestLinkedList {
 			}
 		}
 		
-		//lol
 		
 		System.out.println("End of program.");
 		scanIn.close();
